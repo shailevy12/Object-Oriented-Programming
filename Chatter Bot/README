@@ -1,0 +1,54 @@
+shai.levy1
+315262907
+
+=====================================
+=      ChatterBots chat example     =
+=====================================
+
+Phoebe: say je
+Joey: je
+Phoebe: say m'ap
+Joey: m'ap
+Phoebe: say pelle
+Joey: pelle
+Phoebe: je m'applle
+Joey: Lipupu!
+
+* ONLY FRIENDS LOVERS WILL UNDERSTAND *
+
+=============================
+=      File description     =
+=============================
+ChatterBot.java - implements the ChatterBot class.
+
+
+=============================
+=          Design           =
+=============================
+The ChatterBot will reply to sentences that it gets according to the first word of the current statement.
+If the statement start with "say" (or any other word that the user can choose), then the bot will reply
+accordingly with random reply from its "legal" replies stack,
+otherwise it will choose a random reply from its "iilegal" replies stack.
+
+
+=============================
+=  Implementation details   =
+=============================
+The ChatterBot has 3 mainly fields - * name - name of the bot (like Siri),
+                                     * repliesToIllegalRequest - the replies that the bot will return if the
+                                     statement does not start with the REQUEST_PREFIX (like "say")
+                                     * repliesToLegalRequest - the replies that the bot will return in case
+                                     that he doesn't recognize the statement.(not start with REQUEST_PREFIX)
+ChatterBot also has 2 mainly methods - * replyTo - which checks if the request is legal or illegal and uses
+                                       another methods to reply accordingly.
+                                       * getName - which returns the name of the bot.
+3 important constants:
+REQUEST_PREFIX - the magic prefix that will be the first prefix of a legal request, can be determined by user
+REQUESTED_PHRASE_PLACEHOLDER - used for smart legal replies of the bot (switched by the received statement)
+ILLEGAL_REQUEST_PLACEHOLDER - used for smart illegal replies of the bot (switched by the received statement)
+
+
+=============================
+=    Answers to questions   =
+=============================
+None
