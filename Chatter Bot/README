@@ -44,8 +44,3 @@ REQUEST_PREFIX - the magic prefix that will be the first prefix of a legal reque
 REQUESTED_PHRASE_PLACEHOLDER - used for smart legal replies of the bot (switched by the received statement)
 ILLEGAL_REQUEST_PLACEHOLDER - used for smart illegal replies of the bot (switched by the received statement)
 
-
-=============================
-=    Answers to questions   =
-=============================
-None
