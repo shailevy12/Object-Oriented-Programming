@@ -1,0 +1,47 @@
+shai.levy1
+315262907
+
+========================================== Whatever player ==================================================
+= This player choose two numbers randomly between 1 to Board.SIZE, so one will be the number of row in      =
+= board, and the other will be the number of col.                                                           =
+= After he chose a place on board randomly he checks if this place is valid (unmarked), if it is he puts    =
+= his mark on this place, otherwise he will choose a new place randomly until he will success.              =
+= (There is always available place, if there wasn't then the player would not have made a turn at all       =
+= because the game would have ended in a draw.)                                                             =
+=============================================================================================================
+
+
+========================================== Clever Player ====================================================
+= This player goes row by row and put mark in the first place that unmarked. In this way he has a much      =
+= better chance of beating the Whatever player because it matters how he fills the board, in most cases he  =
+= will be able to fill a row faster than the Whatever player.                                               =
+=============================================================================================================
+
+
+========================================= Snartypamts Player ================================================
+= This player goes col by col, start from the second col and put mark in the first place that unmarked.     =
+= In this way he has a much better chance of beating the Whatever player because it matters how he fills    =
+= the board, in most cases he will be able to fill a col faster than the Whatever player.                   =
+= In addition, this player also defeats the Clever player since he starts from the second column and        =
+= progresses along the column, in this way he abuses the strategy of the smart player,                      =
+= he will block him and in fact will always start the required sequence before him                          =
+=============================================================================================================
+
+
+**** Whatever VS Clever ****   **** Whatever VS Snarypamts ****   **** Clever VS Snarypamts ****
+* Rounds:              500 *   * Rounds:                  500 *   * Rounds:                500 *
+* Whatever score:       34 *   * Whatever score:           27 *   * Clever score:            0 *
+* Clever score:        466 *   * Snarypamts score:        473 *   * Snartypamts score:     500 *
+* Draw score:            0 *   * Draw score:                0 *   * Draw score:              0 *
+****************************   ********************************   ******************************
+
+
+**** Whatever VS Whatever ****
+* Rounds:              10000 *
+* Player 1 score:       4952 *
+* Player 2 score :      4993 *
+* Draw score:             55 *
+******************************
+
+
+
