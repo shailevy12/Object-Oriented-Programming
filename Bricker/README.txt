@@ -1,6 +1,3 @@
-shai.levy1
-315262907
-
 A. Explain how you planned each behavior you implemented - class lists, design templates
    that the departments implements, whether following your decision or following the planning of
    DanoGameLab.
