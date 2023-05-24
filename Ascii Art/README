@@ -1,0 +1,75 @@
+shai.levy1
+315262907
+
+
+Adjust Brightness To Pixel
+=============================================================================================================
+I chose to divide the image into sub-images, then for each sub-image I went through all its pixels using
+a function that the facade provided me, I converted each pixel to a gray pixel and calculated the average
+of all the pixels, so I've got the average brightness value of the sub-image.
+At the same time I calculated the brightness levels of the characters that provided to me and normalized
+them (I performed a linear stretch on them) so that I could adjust for each sub-image the closet brightness
+value of some character. Finally, I've built an array according to these values and returned it.
+The main method that centralizes all the processes described above is chooseChars.
+
+Collection Usage
+=============================================================================================================
+
+1.BrightnessImgCharMatcher class
+--------------------------------
+I created a HashMap whose key types are images and the values types are double type and there I kept the
+brightness value of each sub-image I calculated. I did this because when we want to render an image that
+we already render, we will not have to recalculate the brightness values of any sub-image that was already
+calculated during the program run, we will actually be able to access these values in O(1)
+
+
+2. Shell class
+--------------------------------
+I used HashSet to save all the characters. As we know, searching for each character in HashSet costs us
+O(1) actions, however searching for a character in a list is an action that costs us O(n). Hence our runtime
+will improve when we want to access some character while program is running.
+
+
+3. ascii_art.Algorithms class
+--------------------------------
+I used HashSet to save all the morse words. As we know, an instance of value which appears in a HashSet
+can not appear more than once. Therefore, the set allows us to know exactly how many unique Morse patterns
+we have from the given list of words.
+
+In addition, I used an HashMap to keep for each letter in English its unique code in Morse and thus we can
+get these values in O(1) time.
+
+
+ascii_art.Algorithms Explanation
+=============================================================================================================
+1. findDuplicate
+----------------
+I used the idea of identifying circuits algorithms to solve this problem.
+At first we will find the beginning of the circle and then find the value which appears more than
+once in the array (circle).
+
+Run time: in the worst case the algorithm will run over the whole array twice,
+    Run time will be T(n) = 2*O(n) = O(n).
+
+2. uniqueMorseRepresentations:
+------------------------------
+First the algorithm creates a HashSet that will contain all the words that will be translated from English
+into Morse language.
+It will also creates a HashMap whose keys will be letters in English while the values will be the code
+of each letter in Morse. Then we will translate all the words in the list, letter by letter using the
+map we created, and insert each translated word into the set.
+Finally the algorithm will return the set size, since this is a set we are guaranteed that it will not have
+duplicates and therefore the set contains all the unique word patterns.
+In total we get that the size of the set is about the number of words.
+
+Run time: In the translation process the algorithm goes through all the letters of all the words in the array,
+that is the sum of the word lengths - S,  in each iteration we will perform 0(1) operations.
+returning the set size is an operation that costs us O(1).
+Therefore the total we get is runtime of O(S).
+
+BONUS IMAGE:
+
+
+
+
+
